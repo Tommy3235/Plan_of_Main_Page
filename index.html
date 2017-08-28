@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>导航页</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="jsfunction.js">
+			function setCookies(name, value)
+			{
+				document.cookie = name + "=" + value + ";" + ";path=/";
+			}
+
+			function getCookies(name)
+			{
+				if (document.cookie.length > 0)
+				{
+					start = document.cookie.indexOf(name + "=")
+					if (start != -1)
+					{
+						start = start + name.length + 1
+						end = document.cookie.indexOf(";", c_start)
+						if (end == -1)
+							end = document.cookie.length
+						return unescape(document.cookie.substring(start, end))
+					}
+				}
+				return ""
+			}
+
+			function haha()
+			{
+				alert(getCookies("bgname"))
+			}
+		</script>
+	</head>
+
+	<body id="main" style="background-repeat: no-repeat;" onload="openHtml()">
+		<div id="all">
+			<!--网页顶部区域-->
+			<div id="top_background">
+				<div id="top_area" class="main_area">
+					<!--天气预报区域-->
+					<div id="weather_forecast_area">
+						<iframe id="weather_forecast" scrolling="no" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&color=%23&icon=1&num=5&site=13"></iframe>
+					</div>
+					<!--背景设置区域（按钮）-->
+					<div id="setting_button_picture">
+						<img id="setting_button" alt="背景设置" src="img/set0.png" onmousemove="onMouseMovePicture()" onmouseout="onMouseOutPicture()"
+						 onclick="showDiv()" />
+						<!--背景设置区域-->
+						<div id="setting_panel" style="display:none;">
+							<div id="setting_word">背景设置</div>
+							<div id="setting_picture_area">
+								<!--预置背景图缩略图选择区域-->
+								<table style="margin-left:auto;margin-right:auto;">
+									<tr>
+										<td class="picture">
+											<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/1.jpg')"
+											 onmousemove="onMouseMoveSetting('p1')" onmouseout="onMouseOutSetting('p1')">
+										</td>
+										<td class="picture">
+											<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/2.jpg')"
+											 onmousemove="onMouseMoveSetting('p2')" onmouseout="onMouseOutSetting('p2')">
+										</td>
+									</tr>
+									<tr>
+										<td class="picture">
+											<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/3.jpg')"
+											 onmousemove="onMouseMoveSetting('p3')" onmouseout="onMouseOutSetting('p3')">
+										</td>
+									</tr>
+								</table>
+								<!--自定义背景设置区域-->
+								<div id="setting_word">自定义背景设置</div>
+								<div id="prompt_word">
+									自定义背景设置说明： 选择本地图片： 把文件路径中的“
+									<font class="importantwords">\</font>”替换为“
+									<font class="importantwords">/</font>”，并且在路径前添加“
+									<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
+									<font class="importantwords">file:///E:/83926/1.png</font>”。
+								</div>
+								<input id="pb" type="text" style="width:180px;">
+								<input type="button" value="确定" onclick="favoritePicture()">
+								<br/>
+							</div>
+							<div><button type="button" onclick="hideDiv()">关闭</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--百度搜索框区域-->
+			<div id="lower_area" class="main_area">
+				<div id="baidus">
+					<form onsubmit="return gowhere1(this)" target="_blank" name="search_form1" method="get" action="https://www.baidu.com/baidu">
+						<input value="0" name="myselectvalue" type="hidden">
+						<input value="utf-8" name="ie" type="hidden">
+						<input name="tn" value="SE_zzsearchcode_shhzc78w" type="hidden">
+						<input name="ct" type="hidden">
+						<input name="lm" type="hidden">
+						<input name="cl" type="hidden">
+						<input name="rn" type="hidden">
+						<img alt="Baidu" src="img/bd_logo1.png" border="0" align="bottom" width="130px" />
+						<input id="word" name="word" onfocus="checkHttps" type="text" baiduSug="1">
+						<input id="baiduanniu" value="百度一下" type="submit">
+						<br>
+						<div id="baidusw">
+							<input value="0" onclick="javascript:this.form.myselectvalue.value=4;" name="myselect" type="radio">
+							<font class="baidux">新闻&nbsp;&nbsp;&nbsp;</font>
+							<input value="0" onclick="javascript:this.form.myselectvalue.value=0;" name="myselect" checked="checked" type="radio">
+							<span class="f12">
+						<font class="baidux">网页&nbsp;&nbsp;&nbsp;</font>
+						</span>
+							<input value="1" onclick="javascript:this.form.myselectvalue.value=1;" name="myselect" type="radio">
+							<span class="f12">
+						<font class="baidux">音乐&nbsp;&nbsp;&nbsp;</font>
+						</span>
+							<input value="0" onclick="javascript:this.form.myselectvalue.value=6;" name="myselect" type="radio">
+							<font class="baidux">贴吧&nbsp;&nbsp;&nbsp;</font>
+							<input value="0" onclick="javascript:this.form.myselectvalue.value=5;" name="myselect" type="radio">
+							<font class="baidux">图片</font>
+						</div>
+					</form>
+				</div>
+				<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
+				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
+				<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
+				<script>
+					function checkHttps()
+					{
+						BaiduHttps.useHttps();
+					};
+					function gowhere1(formname)
+					{
+						var data = BaiduHttps.useHttps();
+						var url;
+						if (formname.myselectvalue.value == "0")
+						{
+							url = data.s == 0 ? "http://www.baidu.com/baidu" : 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
+							document.search_form1.tn.value = "SE_zzsearchcode_shhzc78w";
+							formname.method = "get";
+						}
+						if (formname.myselectvalue.value == "1")
+						{
+							document.search_form1.tn.value = "SE_zzsearchcode_shhzc78w";
+							document.search_form1.ct.value = "134217728";
+							document.search_form1.lm.value = "-1";
+							url = "http://mp3.baidu.com/m";
+						}
+						if (formname.myselectvalue.value == "4")
+						{
+							document.search_form1.tn.value = "SE_zzsearchcode_shhzc78w";
+							document.search_form1.cl.value = "2";
+							document.search_form1.rn.value = "20";
+							url = "http://news.baidu.com/ns";
+						}
+						if (formname.myselectvalue.value == "5")
+						{
+							document.search_form1.tn.value = "SE_zzsearchcode_shhzc78w";
+							document.search_form1.ct.value = "201326592";
+							document.search_form1.cl.value = "2";
+							document.search_form1.lm.value = "-1";
+							url = "http://image.baidu.com/i";
+						}
+						if (formname.myselectvalue.value == "6")
+						{
+							document.search_form1.tn.value = "SE_zzsearchcode_shhzc78w";
+							document.search_form1.ct.value = "352321536";
+							document.search_form1.rn.value = "10";
+							document.search_form1.lm.value = "65536";
+							url = "http://tieba.baidu.com";
+						}
+						formname.action = url;
+						return true;
+					}
+				</script>
+
+				<div id="URL_area">
+					<!--网址区域-->
+					<table id="URL_table">
+						<tbody>
+							<tr>
+								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" text-decoration="none">哔哩哔哩弹幕网</a> </td>
+								<td class="kuandu"><a href="https://www.baidu.com" target="_blank">百度</a> </td>
+								<td class="kuandu"><a href="https://www.youku.com/" target="_blank">优酷</a> </td>
+								<td class="kuandu"><a href="https://www.taobao.com" target="_blank">淘宝</a></td>
+								<td class="kuandu"><a href="https://www.ithome.com/" target="_blank">IT之家</a></td>
+								<td class="kuandu"><a href="https://share.dmhy.org/" target="_blank">动漫花园资源网</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<!--button onclick="setCookies('bgname','file:///E:/html/Name (5).png',365)">添加Cookies</button>
+					<button onclick="haha()">读取Cookies</button><br/>
+					<input id="hahaha" type="text"-->
+				</div>
+				<div id="zhushi">
+					HTML页面版本：1.01.3<br>
+					日期：2017年8月28日<br>
+					<br>
+					CSS文件版本：1.13<br>
+					日期：2017年8月28日
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
