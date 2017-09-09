@@ -1,4 +1,4 @@
-/* 版本：1.13 */
+/* 版本：1.14 */
 body
 {
 	font-family: "微软雅黑";
@@ -74,6 +74,8 @@ body
 {
 	width: 150px;
 	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .baidux
