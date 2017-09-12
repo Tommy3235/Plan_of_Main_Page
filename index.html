@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>导航页</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link id="maincss" rel="stylesheet" type="text/css" href="style.css" />
+		<link id="linkcss" rel="stylesheet" type="text/css" href="link_style_1.css" />
 		<script type="text/javascript" src="jsfunction.js">
 			function setCookies(name, value)
 			{
@@ -52,29 +53,33 @@
 						 onclick="showDiv()" />
 						<!--背景设置区域-->
 						<div id="setting_panel" style="display:none;">
-							<div id="setting_word">背景设置</div>
-							<div id="setting_picture_area">
-								<!--预置背景图缩略图选择区域-->
-								<table style="margin-left:auto;margin-right:auto;">
-									<tr>
-										<td class="picture">
-											<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/1.jpg')"
-											 onmousemove="onMouseMoveSetting('p1')" onmouseout="onMouseOutSetting('p1')">
-										</td>
-										<td class="picture">
-											<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/2.jpg')"
-											 onmousemove="onMouseMoveSetting('p2')" onmouseout="onMouseOutSetting('p2')">
-										</td>
-									</tr>
-									<tr>
-										<td class="picture">
-											<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/3.jpg')"
-											 onmousemove="onMouseMoveSetting('p3')" onmouseout="onMouseOutSetting('p3')">
-										</td>
-									</tr>
-								</table>
-								<!--自定义背景设置区域-->
-								<div id="setting_word">自定义背景设置</div>
+							<div>
+								<div class="setting_word">背景设置</div>
+								<div id="setting_picture_area">
+									<!--预置背景图缩略图选择区域-->
+									<table style="margin-left:auto;margin-right:auto;">
+										<tr>
+											<td class="picture">
+												<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/1.jpg')"
+												 onmousemove="onMouseMoveSetting('p1')" onmouseout="onMouseOutSetting('p1')">
+											</td>
+											<td class="picture">
+												<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/2.jpg')"
+												 onmousemove="onMouseMoveSetting('p2')" onmouseout="onMouseOutSetting('p2')">
+											</td>
+										</tr>
+										<tr>
+											<td class="picture">
+												<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/3.jpg')"
+												 onmousemove="onMouseMoveSetting('p3')" onmouseout="onMouseOutSetting('p3')">
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<!--自定义背景设置区域-->
+							<div>
+								<div class="setting_word">自定义背景设置</div>
 								<div id="prompt_word">
 									自定义背景设置说明： 选择本地图片： 把文件路径中的“
 									<font class="importantwords">\</font>”替换为“
@@ -84,9 +89,18 @@
 								</div>
 								<input id="pb" type="text" style="width:180px;">
 								<input type="button" value="确定" onclick="favoritePicture()">
-								<br/>
 							</div>
-							<div><button type="button" onclick="hideDiv()">关闭</button></div>
+							<div>
+								<div class="setting_word">主题颜色设置</div>
+								<div>
+									<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('FE4365')"><font color="#FFFFFF">少女粉</font></button>
+									<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
+								</div>
+							</div>
+							< <br/>
+							<div>
+								<button type="button" onclick="hideDiv()">关闭</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -103,7 +117,7 @@
 						<input name="cl" type="hidden">
 						<input name="rn" type="hidden">
 						<img alt="Baidu" src="img/bd_logo1.png" border="0" align="bottom" width="130px" />
-						<input id="word" name="word" onfocus="checkHttps" type="text" baiduSug="1">
+						<input id="word" name="word" onfocus="checkHttps" type="text">
 						<input id="baiduanniu" value="百度一下" type="submit">
 						<br>
 						<div id="baidusw">
@@ -127,7 +141,6 @@
 				<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
-				<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
 				<script>
 					function checkHttps()
 					{
@@ -183,7 +196,7 @@
 					<table id="URL_table">
 						<tbody>
 							<tr>
-								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank">哔哩哔哩弹幕网</a> </td>
+								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" onMouseOver="document.bgColor='#0066CC'">哔哩哔哩弹幕网</a> </td>
 								<td class="kuandu"><a href="https://www.baidu.com" target="_blank">百度</a> </td>
 								<td class="kuandu"><a href="https://www.youku.com/" target="_blank">优酷</a> </td>
 								<td class="kuandu"><a href="https://www.taobao.com" target="_blank">淘宝</a></td>
@@ -194,20 +207,20 @@
 								<td class="kuandu"><a href="https://www.mi.com" target="_blank">小米商城</a> </td>
 								<td class="kuandu"><a href="https://www.jd.com/" target="_blank">京东商城</a> </td>
 								<td class="kuandu"><a href="https://i.mi.com/" target="_blank">小米云服务</a> </td>
-								
+
 							</tr>
 						</tbody>
 					</table>
-					<!--button onclick="setCookies('bgname','file:///E:/html/Name (5).png',365)">添加Cookies</button>
+					<!--p id="mmm">hahaha</p><br>
+					<button onclick="changeThemeColor('#1E90FF')">改变主题颜色</button>
+					<button onclick="setCookies('bgname','file:///E:/html/Name (5).png',365)">添加Cookies</button>
 					<button onclick="haha()">读取Cookies</button><br/>
-					<input id="hahaha" type="text"-->
+					<input id="testha" type="text"-->
 				</div>
 				<div id="zhushi">
-					HTML页面版本：1.01.6<br>
-					日期：2017年9月12日<br>
-					<br>
-					CSS文件版本：1.14<br>
-					日期：2017年9月9日
+					HTML页面版本：1.02.0 (2017年9月12日)
+					<br> CSS文件版本：15 (2017年9月12日)
+					<br>JavaScript文件版本：12 (2017年9月12日)
 				</div>
 			</div>
 		</div>
