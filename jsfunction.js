@@ -1,4 +1,4 @@
-﻿// JS文件版本：12
+﻿// JS文件版本：13
 //-------------------------------
 //小齿轮设置图片更改1
 function onMouseMovePicture()
@@ -54,17 +54,17 @@ function favoritePicture()
 //更改主题颜色执行部分
 function setThemeColor(co, fn)
 {
-	var al = document.getElementById("linkcss");
-	var bl = document.getElementsByClassName("setting_picture");
-	var cl = document.getElementsByClassName("importantwords");
-	al.href = fn;
+	var a = document.getElementById("linkcss");
+	var b = document.getElementsByClassName("setting_picture");
+	var c = document.getElementsByClassName("importantwords");
+	a.href = fn;
 	for (var i = 0; i < b.length; i++)
 	{
-		bl[i].style.borderColor = co;
+		b[i].style.borderColor = co;
 	}
 	for (var i = 0; i < c.length; i++)
 	{
-		cl[i].style.color = co;
+		c[i].style.color = co;
 	}
 }
 //更改主题颜色选择部分
