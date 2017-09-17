@@ -1,4 +1,4 @@
-/* CSS文件版本：15 */
+/* CSS文件版本：16 */
 /* ----------------------------- */
 body
 {
@@ -9,6 +9,12 @@ body
 	margin-right: 0px;
 	background-size: 100%;
 	background-repeat: no-repeat;
+}
+
+a
+{
+	color: #000000;
+	text-decoration: none;
 }
 
 #top_background

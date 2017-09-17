@@ -1,4 +1,4 @@
-﻿// JS文件版本：13
+﻿// JS文件版本：14
 //-------------------------------
 //小齿轮设置图片更改1
 function onMouseMovePicture()
@@ -52,12 +52,10 @@ function favoritePicture()
 }
 
 //更改主题颜色执行部分
-function setThemeColor(co, fn)
+function setThemeColor(co)
 {
-	var a = document.getElementById("linkcss");
 	var b = document.getElementsByClassName("setting_picture");
 	var c = document.getElementsByClassName("importantwords");
-	a.href = fn;
 	for (var i = 0; i < b.length; i++)
 	{
 		b[i].style.borderColor = co;
@@ -72,10 +70,21 @@ function changeThemeColor(choice)
 {
 	switch (choice)
 	{
-		case "FE4365": setThemeColor("#FE4365", "link_style_1.css");setCookies("themecolor", "FE4365", 365); break;
-		case "1E90FF": setThemeColor("#1E90FF", "link_style_2.css");setCookies("themecolor", "1E90FF", 365); break;
-		default: setThemeColor("#FE4365", "link_style_1.css"); break;
+		case "#FE4365": setThemeColor("#FE4365"); setCookies("themecolor", "#FE4365", 365); break;
+		case "#1E90FF": setThemeColor("#1E90FF"); setCookies("themecolor", "#1E90FF", 365); break;
+		case "#32CD32": setThemeColor("#32CD32"); setCookies("themecolor", "#32CD32", 365); break;
+		default: setThemeColor("#FE4365"); setCookies("themecolor", "#FE4365", 365); break;
 	}
+}
+//超链接特效ON
+function onMouseMoveNet(a)
+{
+	a.style.color = getCookies("themecolor");
+}
+//超链接特效MOVE
+function onMouseOutNet(a)
+{
+	a.style.color = "#000000";
 }
 //添加Cookies
 function setCookies(name, value, time)
@@ -121,8 +130,8 @@ function openHtml()
 	}
 	if (c == null || c == "")
 	{
-		setCookies("themecolor", "FE4365", 365);
-		changeThemeColor("FE4365");
+		setCookies("themecolor", "#FE4365", 365);
+		changeThemeColor("#FE4365");
 	}
 	else
 	{
@@ -131,6 +140,15 @@ function openHtml()
 }
 
 //测试用函数
+function onMouseMoveNet(a)
+{
+	a.style.color = getCookies("themecolor");
+}
+function onMouseOutNet(a)
+{
+	a.style.color = "#000000";
+}
+
 function getThemeColor()
 {
 	var a = document.getElementsById("testha");
