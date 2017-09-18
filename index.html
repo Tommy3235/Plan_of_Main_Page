@@ -54,51 +54,65 @@
 						<div id="setting_panel" style="display:none;">
 							<div>
 								<div class="setting_word">背景设置</div>
-								<div id="setting_picture_area">
+								<div class="out_table">
 									<!--预置背景图缩略图选择区域-->
-									<table style="margin-left:auto;margin-right:auto;">
+									<table class="color_picture">
 										<tr>
 											<td class="picture">
-												<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/1.jpg')"
-												 onmousemove="onMouseMoveSetting('p1')" onmouseout="onMouseOutSetting('p1')">
+												<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
+												 onmouseout="onMouseOutSetting('p1')">
 											</td>
 											<td class="picture">
-												<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/2.jpg')"
-												 onmousemove="onMouseMoveSetting('p2')" onmouseout="onMouseOutSetting('p2')">
+												<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
+												 onmouseout="onMouseOutSetting('p2')">
 											</td>
 										</tr>
 										<tr>
 											<td class="picture">
-												<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" height="60px" onclick="changeBackgroundPicture('img/3.jpg')"
-												 onmousemove="onMouseMoveSetting('p3')" onmouseout="onMouseOutSetting('p3')">
+												<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
+												 onmouseout="onMouseOutSetting('p3')">
 											</td>
 										</tr>
 									</table>
 								</div>
 							</div>
+							<hr>
 							<!--自定义背景设置区域-->
 							<div>
 								<div class="setting_word">自定义背景设置</div>
-								<div id="prompt_word">
-									自定义背景设置说明： 选择本地图片： 把文件路径中的“
-									<font class="importantwords">\</font>”替换为“
-									<font class="importantwords">/</font>”，并且在路径前添加“
-									<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
-									<font class="importantwords">file:///E:/83926/1.png</font>”。
+								<div class="out_table">
+									<div id="prompt_word">
+										自定义背景设置说明： 选择本地图片： 把文件路径中的“
+										<font class="importantwords">\</font>”替换为“
+										<font class="importantwords">/</font>”，并且在路径前添加“
+										<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
+										<font class="importantwords">file:///E:/83926/1.png</font>”。
+									</div>
+									<input id="pb" type="text" style="width:180px;">
+									<input type="button" value="确定" onclick="favoritePicture()">
 								</div>
-								<input id="pb" type="text" style="width:180px;">
-								<input type="button" value="确定" onclick="favoritePicture()">
 							</div>
+							<hr>
 							<!--主题颜色设置-->
 							<div>
 								<div class="setting_word">主题颜色设置</div>
-								<div>
-									<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
-									<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
-									<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
+								<div class="out_table">
+									<table class="color_picture">
+										<tr>
+											<td>
+												<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
+											</td>
+											<td>
+												<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
+											</td>
+											<td>
+												<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
+											</td>
+										</tr>
+									</table>
 								</div>
 							</div>
-							<br/>
+							<hr>
 							<div>
 								<button type="button" onclick="hideDiv()">关闭</button>
 							</div>
@@ -106,8 +120,8 @@
 					</div>
 				</div>
 			</div>
-			<!--百度搜索框区域-->
 			<div id="lower_area" class="main_area">
+				<!--百度搜索框区域-->
 				<div id="baidus">
 					<form onsubmit="return gowhere1(this)" target="_blank" name="search_form1" method="get" action="https://www.baidu.com/baidu">
 						<input value="0" name="myselectvalue" type="hidden">
@@ -191,23 +205,22 @@
 						return true;
 					}
 				</script>
-
 				<div id="URL_area">
 					<!--网址区域-->
 					<table id="URL_table">
 						<tbody>
 							<tr>
-								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">哔哩哔哩弹幕网</a> </td>
-								<td class="kuandu"><a href="https://www.baidu.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">百度</a> </td>
-								<td class="kuandu"><a href="https://www.youku.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">优酷</a> </td>
+								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">哔哩哔哩弹幕网</a>									</td>
+								<td class="kuandu"><a href="https://www.baidu.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">百度</a>									</td>
+								<td class="kuandu"><a href="https://www.youku.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">优酷</a>									</td>
 								<td class="kuandu"><a href="https://www.taobao.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">淘宝</a></td>
 								<td class="kuandu"><a href="https://www.ithome.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">IT之家</a></td>
 								<td class="kuandu"><a href="https://share.dmhy.org/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">动漫花园资源网</a></td>
 							</tr>
 							<tr>
-								<td class="kuandu"><a href="https://www.mi.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米商城</a> </td>
-								<td class="kuandu"><a href="https://www.jd.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">京东商城</a> </td>
-								<td class="kuandu"><a href="https://i.mi.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米云服务</a> </td>
+								<td class="kuandu"><a href="https://www.mi.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米商城</a>									</td>
+								<td class="kuandu"><a href="https://www.jd.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">京东商城</a>									</td>
+								<td class="kuandu"><a href="https://i.mi.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米云服务</a>									</td>
 
 							</tr>
 						</tbody>
@@ -219,13 +232,12 @@
 					<input id="testha" type="text"-->
 				</div>
 				<div id="zhushi">
-					HTML页面版本：1.02.2 (2017年9月17日)
-					<br> CSS文件版本：16 (2017年9月17日)
+					HTML页面版本：1.02.3 (2017年9月18日)
+					<br> CSS文件版本：17 (2017年9月18日)
 					<br>JavaScript文件版本：14 (2017年9月17日)
 				</div>
 			</div>
 		</div>
-
 	</body>
 
 </html>

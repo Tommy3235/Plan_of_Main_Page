@@ -1,4 +1,4 @@
-/* CSS文件版本：16 */
+/* CSS文件版本：17 */
 /* ----------------------------- */
 body
 {
@@ -116,7 +116,7 @@ a
 
 #setting_panel
 {
-	height: 500px;
+	height: 540px;
 	width: 300px;
 	text-align: center;
 	float: right;
@@ -144,7 +144,7 @@ a
 	margin-bottom: 10px;
 }
 
-#setting_picture_area
+.out_table
 {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -152,7 +152,8 @@ a
 
 .setting_picture
 {
-	border-color: #FE4365
+	height: 60px;
+	border-color: #FE4365;
 }
 
 .picture
@@ -200,8 +201,12 @@ a
 	width: 210px;
 	margin-top: 10px;
 }
+
 .colorchoose
 {
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 30px;
 	border-top-width: 0px;
 	border-top-style: solid;
 	border-bottom-width: 0px;
@@ -210,4 +215,10 @@ a
 	border-right-style: solid;
 	border-left-width: 0px;
 	border-left-style: solid;
+}
+
+.color_picture
+{
+	margin-left:auto;
+	margin-right:auto;
 }
