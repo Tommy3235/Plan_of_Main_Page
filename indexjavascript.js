@@ -1,20 +1,20 @@
-﻿// JS文件版本：14
+﻿// JS文件版本：15
 //-------------------------------
-//小齿轮设置图片更改1
+//小齿轮设置图片更改
 function onMouseMovePicture()
 {
 	var a = document.getElementById("setting_button");
 	a.src = "img/set1.png";
 }
 
-//小齿轮设置图片更改2
+//小齿轮设置图片更改
 function onMouseOutPicture()
 {
 	var a = document.getElementById("setting_button");
 	a.src = "img/set0.png";
 }
 
-//鼠标指针移动到小齿轮上，图片更改。
+//设置区域显示
 function showDiv()
 {
 	var a = document.getElementById("setting_panel");
@@ -28,7 +28,7 @@ function showDiv()
 	}
 }
 
-//隐藏背景图片设置区域
+//设置区域隐藏
 function hideDiv()
 {
 	var a = document.getElementById("setting_panel");
@@ -73,7 +73,7 @@ function changeThemeColor(choice)
 		case "#FE4365": setThemeColor("#FE4365"); setCookies("themecolor", "#FE4365", 365); break;
 		case "#1E90FF": setThemeColor("#1E90FF"); setCookies("themecolor", "#1E90FF", 365); break;
 		case "#32CD32": setThemeColor("#32CD32"); setCookies("themecolor", "#32CD32", 365); break;
-		default: setThemeColor("#FE4365"); setCookies("themecolor", "#FE4365", 365); break;
+		default: setThemeColor(choice); setCookies("themecolor", choice, 365); break;
 	}
 }
 //超链接特效ON
@@ -139,16 +139,18 @@ function openHtml()
 	}
 }
 
-//测试用函数
+//超链接特效
 function onMouseMoveNet(a)
 {
 	a.style.color = getCookies("themecolor");
 }
+//超链接特效
 function onMouseOutNet(a)
 {
 	a.style.color = "#000000";
 }
-
+//======================================
+//测试用函数
 function getThemeColor()
 {
 	var a = document.getElementsById("testha");

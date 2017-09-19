@@ -6,38 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>导航页</title>
-		<link id="maincss" rel="stylesheet" type="text/css" href="style.css" />
-		<script type="text/javascript" src="jsfunction.js">
-			function setCookies(name, value)
-			{
-				document.cookie = name + "=" + value + ";" + ";path=/";
-			}
+		<link id="maincss" rel="stylesheet" type="text/css" href="indexstyle.css" />
+		<script type="text/javascript" src="indexjavascript.js">
 
-			function getCookies(name)
-			{
-				if (document.cookie.length > 0)
-				{
-					start = document.cookie.indexOf(name + "=")
-					if (start != -1)
-					{
-						start = start + name.length + 1
-						end = document.cookie.indexOf(";", c_start)
-						if (end == -1)
-							end = document.cookie.length
-						return unescape(document.cookie.substring(start, end))
-					}
-				}
-				return ""
-			}
-
-			function haha()
-			{
-				alert(getCookies("bgname"))
-			}
 		</script>
 	</head>
 
-	<body id="main" style="background-repeat: no-repeat;" onload="openHtml()">
+	<body id="main" onload="openHtml()">
 		<div id="all">
 			<!--网页顶部区域-->
 			<div id="top_background">
@@ -210,18 +185,17 @@
 					<table id="URL_table">
 						<tbody>
 							<tr>
-								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">哔哩哔哩弹幕网</a>									</td>
-								<td class="kuandu"><a href="https://www.baidu.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">百度</a>									</td>
-								<td class="kuandu"><a href="https://www.youku.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">优酷</a>									</td>
+								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">哔哩哔哩弹幕网</a></td>
+								<td class="kuandu"><a href="https://www.baidu.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">百度</a></td>
+								<td class="kuandu"><a href="https://www.youku.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">优酷</a></td>
 								<td class="kuandu"><a href="https://www.taobao.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">淘宝</a></td>
 								<td class="kuandu"><a href="https://www.ithome.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">IT之家</a></td>
 								<td class="kuandu"><a href="https://share.dmhy.org/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">动漫花园资源网</a></td>
 							</tr>
 							<tr>
-								<td class="kuandu"><a href="https://www.mi.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米商城</a>									</td>
-								<td class="kuandu"><a href="https://www.jd.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">京东商城</a>									</td>
-								<td class="kuandu"><a href="https://i.mi.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米云服务</a>									</td>
-
+								<td class="kuandu"><a href="https://www.mi.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米商城</a></td>
+								<td class="kuandu"><a href="https://www.jd.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">京东商城</a></td>
+								<td class="kuandu"><a href="https://i.mi.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米云服务</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -232,9 +206,10 @@
 					<input id="testha" type="text"-->
 				</div>
 				<div id="zhushi">
-					HTML页面版本：1.02.3 (2017年9月18日)
+					HTML页面版本：1.02.4 (2017年9月19日)
 					<br> CSS文件版本：17 (2017年9月18日)
 					<br>JavaScript文件版本：14 (2017年9月17日)
+					<br><a href="updata.html" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">更新日志</a>
 				</div>
 			</div>
 		</div>
