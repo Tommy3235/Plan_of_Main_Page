@@ -1,4 +1,4 @@
-/* CSS文件版本：17 */
+/* CSS文件版本：18 */
 /* ----------------------------- */
 body
 {
@@ -9,6 +9,7 @@ body
 	margin-right: 0px;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	background-attachment:fixed;
 }
 
 a

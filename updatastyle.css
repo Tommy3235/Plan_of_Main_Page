@@ -1,4 +1,4 @@
-
+﻿
 body
 {
 	font-family: "微软雅黑";
@@ -8,6 +8,7 @@ body
 	margin-right: 0px;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	background-attachment:fixed;
 }
 
 #colorbar
