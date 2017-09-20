@@ -56,14 +56,16 @@
 							<div>
 								<div class="setting_word">自定义背景设置</div>
 								<div class="out_table">
-									<div id="prompt_word">
-										自定义背景设置说明： 选择本地图片： 把文件路径中的“
-										<font class="importantwords">\</font>”替换为“
-										<font class="importantwords">/</font>”，并且在路径前添加“
-										<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
-										<font class="importantwords">file:///E:/83926/1.png</font>”。
+									<div class="prompt_word">
+										<p>
+											自定义背景设置说明： 选择本地图片： 把文件路径中的“
+											<font class="importantwords">\</font>”替换为“
+											<font class="importantwords">/</font>”，并且在路径前添加“
+											<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
+											<font class="importantwords">file:///E:/83926/1.png</font>”。
+										</p>
 									</div>
-									<input id="pb" type="text" style="width:180px;">
+									<input id="pb" type="text">
 									<input type="button" value="确定" onclick="favoritePicture()">
 								</div>
 							</div>
@@ -72,6 +74,11 @@
 							<div>
 								<div class="setting_word">主题颜色设置</div>
 								<div class="out_table">
+									<div class="prompt_word">
+										<p>
+											说明：刷新页面之后，全局生效。
+										</p>
+									</div>
 									<table class="color_picture">
 										<tr>
 											<td>
@@ -110,7 +117,7 @@
 						<input name="cl" type="hidden">
 						<input name="rn" type="hidden">
 						<img alt="Baidu" src="img/bd_logo1.png" border="0" align="bottom" width="130px" />
-						<input id="word" name="word" onfocus="checkHttps" type="text" baiduSug="1">
+						<input id="word" name="word" onfocus="checkHttps" type="text">
 						<input id="baiduanniu" value="百度一下" type="submit">
 						<br>
 						<div id="baidusw">
@@ -135,6 +142,22 @@
 				<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
+				<!--百度搜索框提示-->
+				<script type="text/javascript">
+					var params = {
+						"XOffset": -1, //提示框位置横向偏移量,单位px  
+						"YOffset": -1, //提示框位置纵向偏移量,单位px  
+						"width": 508, //提示框宽度，单位px  
+						"fontColor": "#000000", //提示框文字颜色  
+						"fontColorHI": "#FFFFFF",   //提示框高亮选择时文字颜色  
+						"fontSize": "16px",      //文字大小  
+						"fontFamily": "微软雅黑",  //文字字体  
+						"borderColor": "gray",   //提示框的边框颜色  
+						"bgcolorHI": getCookies("themecolor"),     //提示框高亮选择的颜色  
+						"sugSubmit": true       //在选择提示词条是是否提交表单  
+					};
+					BaiduSuggestion.bind("word", params);
+				</script>
 				<script>
 					function checkHttps()
 					{
@@ -203,14 +226,9 @@
 							</tr>
 						</tbody>
 					</table>
-					<!--p id="mmm">hahaha</p><br>
-					<button onclick="changeThemeColor('#1E90FF')">改变主题颜色</button>
-					<button onclick="setCookies('bgname','file:///E:/html/Name (5).png',365)">添加Cookies</button>
-					<button onclick="haha()">读取Cookies</button><br/>
-					<input id="testha" type="text"-->
 				</div>
 				<div id="zhushi">
-					HTML页面版本：8 (2017年9月20日)
+					HTML页面版本：9 (2017年9月20日)
 					<br><a href="updata.html" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">更新日志</a>
 				</div>
 			</div>

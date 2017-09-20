@@ -25,14 +25,3 @@ function getCookies(name)
 	}
 	return "";
 }
-//更改主题颜色选择部分
-function changeThemeColor(choice)
-{
-	switch (choice)
-	{
-		case "#FE4365": setThemeColor("#FE4365"); break;
-		case "#1E90FF": setThemeColor("#1E90FF"); break;
-		case "#32CD32": setThemeColor("#32CD32"); break;
-		default: setThemeColor(choice); break;
-	}
-}

@@ -77,6 +77,13 @@ function favoritePicture()
 	setCookies('bgname', a.value, 365);
 }
 
+//更改主题颜色选择部分
+function changeThemeColor(choice)
+{
+	setThemeColor(choice);
+	setCookies("themecolor",choice,365);
+}
+
 //更改主题颜色执行部分
 function setThemeColor(co)
 {
