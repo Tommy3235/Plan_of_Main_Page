@@ -1,10 +1,11 @@
 //updata专有JS
-//版本：20170920.1
+//版本：20170921.1
 //根据Cookies设置打开网页时操作
 function openHtml()
 {
 	var a = getCookies("bgname");
-	var c = getCookies("themecolor")
+	var c = getCookies("themecolor");
+	var d = getCookies("foregroundcolor");
 	if (a == null || a == "")
 	{
 		document.body.style.backgroundImage = "url(img/1.jpg)";
@@ -20,6 +21,14 @@ function openHtml()
 	else
 	{
 		changeThemeColor(c);
+	}
+	if (d == null || c == "")
+	{
+		setForegroundColor("#000000");
+	}
+	else
+	{
+		setForegroundColor(d);
 	}
 }
 
@@ -42,5 +51,15 @@ function setThemeColor(co)
 	for(var i=0;i<b.length;i++)
 	{
 		b[i].style.color=co;
+	}
+}
+
+//更改前景色
+function setForegroundColor(co)
+{
+	var a = document.getElementsByTagName("li");
+	for (var i = 0; i < a.length; i++)
+	{
+		a[i].style.color = co;
 	}
 }

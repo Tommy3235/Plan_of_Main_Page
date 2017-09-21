@@ -1,5 +1,5 @@
 /*index专有CSS*/
-/*版本：201700820.2 */
+/*版本：201700821.1 */
 #top_background
 {
 	height: 70px;
@@ -99,7 +99,7 @@
 
 #setting_panel
 {
-	height: 550px;
+	height: 640px;
 	width: 300px;
 	text-align: center;
 	float: right;
@@ -189,6 +189,7 @@
 	margin-left: 5px;
 	margin-right: 5px;
 	height: 30px;
+	width:60px;
 	border-top-width: 0px;
 	border-top-style: solid;
 	border-bottom-width: 0px;

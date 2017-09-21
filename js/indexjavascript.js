@@ -1,11 +1,12 @@
 ﻿//index页面专有JS
-//版本：20170920.1
+//版本：20170921.1
 //根据Cookies设置打开网页时操作
 function openHtml()
 {
 	var a = getCookies("bgname");
 	var b = document.getElementById("pb");
-	var c = getCookies("themecolor")
+	var c = getCookies("themecolor");
+	var d = getCookies("foregroundcolor");
 	b.value = getCookies("favbgname");
 	if (a == null || a == "")
 	{
@@ -24,6 +25,15 @@ function openHtml()
 	else
 	{
 		changeThemeColor(c);
+	}
+	if (d == null || c == "")
+	{
+		setCookies("foregroundcolor", "#000000", 365);
+		setForegroundColor("#000000");
+	}
+	else
+	{
+		setForegroundColor(d);
 	}
 }
 //小齿轮设置图片更改
@@ -81,7 +91,7 @@ function favoritePicture()
 function changeThemeColor(choice)
 {
 	setThemeColor(choice);
-	setCookies("themecolor",choice,365);
+	setCookies("themecolor", choice, 365);
 }
 
 //更改主题颜色执行部分
@@ -99,6 +109,18 @@ function setThemeColor(co)
 	}
 }
 
+//更改前景色
+function setForegroundColor(co)
+{
+	var a = document.getElementsByTagName("a");
+	var b = document.getElementById("zhushi");
+	for (var i = 0; i < a.length; i++)
+	{
+		a[i].style.color = co;
+	}
+	b.style.color = co;
+	setCookies("foregroundcolor", co, 365);
+}
 //超链接特效ON
 function onMouseMoveNet(a)
 {
@@ -107,7 +129,7 @@ function onMouseMoveNet(a)
 //超链接特效MOVE
 function onMouseOutNet(a)
 {
-	a.style.color = "#000000";
+	a.style.color = getCookies("foregroundcolor");;
 }
 //设置图片特效ON
 function onMouseMoveSetting(a)

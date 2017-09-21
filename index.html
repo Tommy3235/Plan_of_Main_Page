@@ -72,6 +72,23 @@
 							<hr>
 							<!--主题颜色设置-->
 							<div>
+								<div class="setting_word">前景颜色设置</div>
+								<div class="out_table">
+									<table class="color_picture">
+										<tr>
+											<td>
+												<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
+											</td>
+											<td>
+												<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<hr>
+							<!--主题颜色设置-->
+							<div>
 								<div class="setting_word">主题颜色设置</div>
 								<div class="out_table">
 									<div class="prompt_word">
@@ -144,6 +161,7 @@
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
 				<!--百度搜索框提示-->
 				<script type="text/javascript">
+				var color;
 					var params = {
 						"XOffset": -1, //提示框位置横向偏移量,单位px  
 						"YOffset": -1, //提示框位置纵向偏移量,单位px  
@@ -228,7 +246,7 @@
 					</table>
 				</div>
 				<div id="zhushi">
-					HTML页面版本：9 (2017年9月20日)
+					HTML页面版本：10 (2017年9月21日)
 					<br><a href="updata.html" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">更新日志</a>
 				</div>
 			</div>
