@@ -1,5 +1,10 @@
-﻿/*updata专有CSS*/
+/*updata专有CSS*/
 /*版本：201700820.1 */
+
+cite
+{
+    font-style: normal;
+}
 #colorbar
 {
     width: 100%;
@@ -29,4 +34,17 @@ h1
 h2
 {
      color:#FE4365
+}
+
+.zhushi
+{
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-color: #FE4365;
+    margin-left: 27px;
+    padding-left: 10px;
+}
+.updatalog
+{
+    width:100%;
 }

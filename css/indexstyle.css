@@ -1,5 +1,5 @@
-/*index专有CSS*/
-/*版本：201700821.1 */
+﻿/*index专有CSS*/
+/*版本：201701001.1 */
 #top_background
 {
 	height: 70px;
@@ -16,14 +16,12 @@
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 400px;
-	width: 400px;
+	margin-top: 10%;
 	font-size: 12px;
 }
 
 #baidus
 {
-	 width: 900px;
 	 text-align: center;
 	 margin-left: auto;
 	 margin-right: auto;
@@ -37,7 +35,8 @@
 #word
 {
 	font-size: 16px;
-	width: 500px;
+	width: 40%;
+	max-width: 500px;
 	height: 30px;
 	padding-bottom: 3px;
 	padding-top: 3px;
@@ -56,7 +55,8 @@
 {
 	margin-left: auto;
 	margin-right: auto;
-	width: 900px;
+	width: 70%;
+	min-width:900px;
 	text-align: center;
 }
 
@@ -78,16 +78,16 @@
 #weather_forecast_area
 {
 	height: 70px;
-	width: 670px;
+	width: 40%;
+	min-width: 650px;
 	float: left;
 }
 
 #weather_forecast
 {
-	width: 650px;
+	width: 100%;
 	height: 60px;
 	margin-top: 10px;
-	margin-left: 20px;
 	margin-right: auto;
 }
 
@@ -103,8 +103,8 @@
 	width: 300px;
 	text-align: center;
 	float: right;
-	margin-right: 100px;
-	margin-top: 100px;
+	margin-right: 10%;
+	margin-top: 50%;
 	border-style: solid;
 	border-width: 0px;
 	border-radius: 15px 15px 15px 15px;
@@ -114,7 +114,7 @@
 #setting_button_picture
 {
 	height: 70px;
-	width: 100px;
+	width: 40px;
 	float: right;
 	text-align: center;
 }
@@ -177,6 +177,7 @@
 #URL_area
 {
 	margin-top: 100px;
+	width:100%;
 }
 
 #pb

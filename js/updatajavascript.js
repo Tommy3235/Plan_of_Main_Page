@@ -1,5 +1,5 @@
 //updata专有JS
-//版本：20170921.1
+//版本：20171001.1
 //根据Cookies设置打开网页时操作
 function openHtml()
 {
@@ -36,7 +36,6 @@ function openHtml()
 function changeThemeColor(choice)
 {
 	setThemeColor(choice);
-	setCookies("themecolor",choice,365);
 }
 
 //更改主题颜色执行部分
@@ -44,22 +43,24 @@ function setThemeColor(co)
 {
 	var a = document.getElementsByTagName("h1");
 	var b = document.getElementsByTagName("h2");
-	for(var i=0;i<a.length;i++)
+	for (var i = 0; i < a.length; i++)
 	{
-		a[i].style.color=co;
+		a[i].style.color = co;
 	}
-	for(var i=0;i<b.length;i++)
+	for (var i = 0; i < b.length; i++)
 	{
-		b[i].style.color=co;
+		b[i].style.color = co;
 	}
 }
 
 //更改前景色
 function setForegroundColor(co)
 {
-	var a = document.getElementsByTagName("li");
-	for (var i = 0; i < a.length; i++)
+	var a = document.getElementById("mainpage");
+	var c = document.getElementsByClassName("zhushi");
+	a.style.color = co;
+	for (var i = 0; i < c.length; i++)
 	{
-		a[i].style.color = co;
+		c[i].style.borderColor = co;
 	}
 }
