@@ -1,6 +1,9 @@
 /*updata专有CSS*/
-/*版本：201700820.1 */
-
+/*版本：201700920.1 */
+body
+{
+    text-align: left;
+}
 cite
 {
     font-style: normal;
@@ -15,7 +18,8 @@ cite
 {
     width: 80%;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    margin-bottom: 70px;
 }
 #titlearea
 {

@@ -56,11 +56,13 @@ function showDiv()
 	var a = document.getElementById("setting_panel");
 	if (a.style.display == "none")
 	{
-		a.style.display = "";
+		a.style.display = "block";
+		document.getElementById('fade').style.display = 'block';
 	}
 	else
 	{
 		a.style.display = "none";
+		document.getElementById('fade').style.display = 'none'
 	}
 }
 
@@ -69,6 +71,8 @@ function hideDiv()
 {
 	var a = document.getElementById("setting_panel");
 	a.style.display = "none";
+	document.getElementById('fade').style.display = 'none'
+
 }
 
 //更改背景图片
@@ -143,4 +147,10 @@ function onMouseOutSetting(a)
 {
 	var b = document.getElementById(a);
 	b.style.borderWidth = "0px";
+}
+
+//获得网页高度
+function getHeight()
+{
+	return window.screen.availWidth;
 }

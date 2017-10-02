@@ -1,14 +1,15 @@
-﻿/*index专有CSS*/
-/*版本：201701001.1 */
-#top_background
+/*index专有CSS*/
+/*版本：201701002.1 */
+#top_bar
 {
-	height: 70px;
+	width:100%;
+	height:100%;
 	background-color: rgba(255, 255, 255, 0.40)
 }
 
-#main
+#bar_area
 {
-	text-align: center;
+	height: 70px;
 }
 
 #zhushi
@@ -73,8 +74,6 @@
 	font-size: 16px;
 }
 
-
-
 #weather_forecast_area
 {
 	height: 70px;
@@ -96,22 +95,43 @@
 	height: 30px;
 	padding-top: 20px;
 }
-
+/* 个性设置区域 */
 #setting_panel
 {
-	height: 640px;
-	width: 300px;
+	position: absolute;
+	z-index: 1001;
+	overflow: auto;
+	top: 0%;
+	left: 70%;
+	width: 30%;
+	min-width: 300px;
+	height: 100%;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
 	text-align: center;
-	float: right;
-	margin-right: 10%;
-	margin-top: 50%;
 	border-style: solid;
 	border-width: 0px;
-	border-radius: 15px 15px 15px 15px;
-	background-color: rgba(0,0,0,0.5)
+	/* border-radius: 15px 15px 15px 15px; */
+	background-color: #626262;
+	
 }
 
-#setting_button_picture
+.black_overlay
+{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1001;
+	opacity: 0.5;
+}
+
+#setting_button_area
 {
 	height: 70px;
 	width: 40px;
@@ -121,12 +141,28 @@
 
 .setting_word
 {
-	color: #FFFFFF;
+	color: #000000;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.out_table
+.prompt_word
+{
+	color: #000000;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 2em;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.importantwords
+{
+	color: #FE4365;
+	text-decoration: underline;
+}
+
+.out_of_table
 {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -151,29 +187,12 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-#top_area
-{
-	height: 70px;
-}
+
 #lower_area
 {
 	padding-top: 60px;
 }
-.importantwords
-{
-	color: #FE4365;
-	text-decoration: underline;
-}
 
-.prompt_word
-{
-	color: #FFFFFF;
-	font-size: 14px;
-	text-align: left;
-	text-indent: 2em;
-	padding-left: 10px;
-	padding-right: 10px;
-}
 #URL_area
 {
 	margin-top: 100px;

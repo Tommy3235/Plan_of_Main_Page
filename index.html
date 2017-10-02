@@ -12,156 +12,137 @@
 		<script type="text/javascript" src="js/mainjavascript.js"></script>
 	</head>
 
-	<body id="main" onload="openHtml()">
+	<body onload="openHtml()">
 		<div id="all">
-			<!--网页顶部区域-->
-			<div id="top_background">
-				<div id="top_area" class="main_area">
-					<!--天气预报区域-->
+			<!-- 网页顶部区域-->
+			<div id="top_bar">
+				<div id="bar_area" class="main_area">
+					<!-- 天气预报区域-->
 					<div id="weather_forecast_area">
 						<iframe id="weather_forecast" scrolling="no" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&color=%23&icon=1&num=5&site=13"></iframe>
 					</div>
-					<!--背景设置区域（按钮）-->
-					<div id="setting_button_picture">
+					<!-- 背景设置区域（按钮）-->
+					<div id="setting_button_area">
 						<img id="setting_button" alt="背景设置" src="img/set0.png" onmousemove="onMouseMovePicture()" onmouseout="onMouseOutPicture()"
 						 onclick="showDiv()" />
-						<!--背景设置区域-->
-						<div id="setting_panel" style="display:none;">
-							<div>
-								<div class="setting_word">背景设置</div>
-								<div class="out_table">
-									<!--预置背景图缩略图选择区域-->
-									<table class="color_picture">
-										<tr>
-											<td class="picture">
-												<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
-												 onmouseout="onMouseOutSetting('p1')">
-											</td>
-											<td class="picture">
-												<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
-												 onmouseout="onMouseOutSetting('p2')">
-											</td>
-										</tr>
-										<tr>
-											<td class="picture">
-												<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
-												 onmouseout="onMouseOutSetting('p3')">
-											</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<hr>
-							<!--自定义背景设置区域-->
-							<div>
-								<div class="setting_word">自定义背景设置</div>
-								<div class="out_table">
-									<div class="prompt_word">
-										<p>
-											自定义背景设置说明： 选择本地图片： 把文件路径中的“
-											<font class="importantwords">\</font>”替换为“
-											<font class="importantwords">/</font>”，并且在路径前添加“
-											<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
-											<font class="importantwords">file:///E:/83926/1.png</font>”。
-										</p>
-									</div>
-									<input id="pb" type="text">
-									<input type="button" value="确定" onclick="favoritePicture()">
-								</div>
-							</div>
-							<hr>
-							<!--主题颜色设置-->
-							<div>
-								<div class="setting_word">前景颜色设置</div>
-								<div class="out_table">
-									<table class="color_picture">
-										<tr>
-											<td>
-												<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
-											</td>
-											<td>
-												<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
-											</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<hr>
-							<!--主题颜色设置-->
-							<div>
-								<div class="setting_word">主题颜色设置</div>
-								<div class="out_table">
-									<div class="prompt_word">
-										<p>
-											说明：刷新页面之后，全局生效。
-										</p>
-									</div>
-									<table class="color_picture">
-										<tr>
-											<td>
-												<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
-											</td>
-											<td>
-												<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
-											</td>
-											<td>
-												<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
-											</td>
-											<td>
-												<button class="colorchoose" type="button" style="background-color:#A020F0;" onclick="changeThemeColor('#A020F0')"><font color="#FFFFFF">基佬紫</font></button>
-											</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<hr>
-							<div>
-								<button type="button" onclick="hideDiv()">关闭</button>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
+			<!-- ==================================================================================-->
+			<!-- 底 -->
+			<div id="fade" class="black_overlay"></div>
+			<!-- 背景设置区域-->
+			<div id="setting_panel" style="display:none;">
+				<div>
+					<div class="setting_word">背景设置</div>
+					<div class="out_of_table">
+						<!-- 预置背景图缩略图选择区域-->
+						<table class="color_picture">
+							<tr>
+								<td class="picture">
+									<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
+									 onmouseout="onMouseOutSetting('p1')">
+								</td>
+								<td class="picture">
+									<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
+									 onmouseout="onMouseOutSetting('p2')">
+								</td>
+							</tr>
+							<tr>
+								<td class="picture">
+									<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
+									 onmouseout="onMouseOutSetting('p3')">
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+				<!-- 自定义背景设置区域-->
+				<div>
+					<div class="setting_word">自定义背景设置</div>
+					<div class="out_of_table">
+						<div class="prompt_word">
+							<p>
+								自定义背景设置说明： 选择本地图片： 把文件路径中的“
+								<font class="importantwords">\</font>”替换为“
+								<font class="importantwords">/</font>”，并且在路径前添加“
+								<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
+								<font class="importantwords">file:///E:/83926/1.png</font>”。
+							</p>
+						</div>
+						<input id="pb" type="text">
+						<input type="button" value="确定" onclick="favoritePicture()">
+					</div>
+				</div>
+				<hr>
+				<!-- 前景颜色设置-->
+				<div>
+					<div class="setting_word">前景颜色设置</div>
+					<div class="out_of_table">
+						<table class="color_picture">
+							<tr>
+								<td>
+									<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
+								</td>
+								<td>
+									<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+				<!-- 主题颜色设置-->
+				<div>
+					<div class="setting_word">主题颜色设置</div>
+					<div class="out_of_table">
+						<div class="prompt_word">
+							<p>
+								说明：刷新页面之后，全局生效。
+							</p>
+						</div>
+						<table class="color_picture">
+							<tr>
+								<td>
+									<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
+								</td>
+								<td>
+									<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
+								</td>
+								<td>
+									<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
+								</td>
+								<td>
+									<button class="colorchoose" type="button" style="background-color:#A020F0;" onclick="changeThemeColor('#A020F0')"><font color="#FFFFFF">基佬紫</font></button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<hr>
+				<div>
+					<button type="button" onclick="hideDiv()">关闭</button>
+				</div>
+			</div>
+			<!--==================================================================================-->
 			<div id="lower_area" class="main_area">
-				<!--百度搜索框区域-->
+				<!-- 百度搜索框区域-->
 				<div id="baidus">
 					<form onsubmit="return gowhere1(this)" target="_blank" name="search_form1" method="get" action="https://www.baidu.com/baidu">
-						<input value="0" name="myselectvalue" type="hidden">
-						<input value="utf-8" name="ie" type="hidden">
-						<input name="tn" value="SE_zzsearchcode_shhzc78w" type="hidden">
-						<input name="ct" type="hidden">
-						<input name="lm" type="hidden">
-						<input name="cl" type="hidden">
-						<input name="rn" type="hidden">
 						<img alt="Baidu" src="img/bd_logo1.png" border="0" align="bottom" width="130px" />
 						<input id="word" name="word" onfocus="checkHttps" type="text">
 						<input id="baiduanniu" value="百度一下" type="submit">
 						<br>
-						<div id="baidusw">
-							<input value="0" onclick="javascript:this.form.myselectvalue.value=4;" name="myselect" type="radio">
-							<font class="baidux">新闻&nbsp;&nbsp;&nbsp;</font>
-							<input value="0" onclick="javascript:this.form.myselectvalue.value=0;" name="myselect" checked="checked" type="radio">
-							<span class="f12">
-						<font class="baidux">网页&nbsp;&nbsp;&nbsp;</font>
-						</span>
-							<input value="1" onclick="javascript:this.form.myselectvalue.value=1;" name="myselect" type="radio">
-							<span class="f12">
-						<font class="baidux">音乐&nbsp;&nbsp;&nbsp;</font>
-						</span>
-							<input value="0" onclick="javascript:this.form.myselectvalue.value=6;" name="myselect" type="radio">
-							<font class="baidux">贴吧&nbsp;&nbsp;&nbsp;</font>
-							<input value="0" onclick="javascript:this.form.myselectvalue.value=5;" name="myselect" type="radio">
-							<font class="baidux">图片</font>
-						</div>
 					</form>
 				</div>
 				<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
 				<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
 				<script src="https://www.baidu.com/con?from=zhanzhang"></script>
-				<!--百度搜索框提示-->
+				<!-- 百度搜索框提示-->
 				<script type="text/javascript">
-				var color;
+					var color;
 					var params = {
 						"XOffset": -1, //提示框位置横向偏移量,单位px  
 						"YOffset": -1, //提示框位置纵向偏移量,单位px  
@@ -246,7 +227,7 @@
 					</table>
 				</div>
 				<div id="zhushi">
-					HTML页面版本：10 (2017年9月21日)
+					HTML页面版本：11 (2017年10月2日)
 					<br><a href="updata.html" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">更新日志</a>
 				</div>
 			</div>
