@@ -31,98 +31,106 @@
 			<!-- ==================================================================================-->
 			<!-- 底 -->
 			<div id="fade" class="black_overlay"></div>
+			<!-- ==================================================================================-->
 			<!-- 背景设置区域-->
 			<div id="setting_panel" style="display:none;">
-				<div>
-					<div class="setting_word">背景设置</div>
-					<div class="out_of_table">
-						<!-- 预置背景图缩略图选择区域-->
-						<table class="color_picture">
-							<tr>
-								<td class="picture">
-									<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
-									 onmouseout="onMouseOutSetting('p1')">
-								</td>
-								<td class="picture">
-									<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
-									 onmouseout="onMouseOutSetting('p2')">
-								</td>
-							</tr>
-							<tr>
-								<td class="picture">
-									<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
-									 onmouseout="onMouseOutSetting('p3')">
-								</td>
-							</tr>
-						</table>
+				<div id="set_top_area">
+					<div id="close_button">
+						<img id="close_button_piceure" src="img\close.png" alt="关闭" onclick="hideDiv()">
 					</div>
 				</div>
-				<hr>
-				<!-- 自定义背景设置区域-->
-				<div>
-					<div class="setting_word">自定义背景设置</div>
-					<div class="out_of_table">
-						<div class="prompt_word">
-							<p>
-								自定义背景设置说明： 选择本地图片： 把文件路径中的“
-								<font class="importantwords">\</font>”替换为“
-								<font class="importantwords">/</font>”，并且在路径前添加“
-								<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
-								<font class="importantwords">file:///E:/83926/1.png</font>”。
-							</p>
+				<div id="set_lower_area">
+					<div id="bgset">
+						<div class="setting_word">背景设置</div>
+						<div class="out_of_table">
+							<!-- 预置背景图缩略图选择区域-->
+							<table class="color_picture">
+								<tr>
+									<td class="picture">
+										<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
+										 onmouseout="onMouseOutSetting('p1')">
+									</td>
+									<td class="picture">
+										<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
+										 onmouseout="onMouseOutSetting('p2')">
+									</td>
+								</tr>
+								<tr>
+									<td class="picture">
+										<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
+										 onmouseout="onMouseOutSetting('p3')">
+									</td>
+								</tr>
+							</table>
 						</div>
-						<input id="pb" type="text">
-						<input type="button" value="确定" onclick="favoritePicture()">
 					</div>
-				</div>
-				<hr>
-				<!-- 前景颜色设置-->
-				<div>
-					<div class="setting_word">前景颜色设置</div>
-					<div class="out_of_table">
-						<table class="color_picture">
-							<tr>
-								<td>
-									<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
-								</td>
-								<td>
-									<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<hr>
-				<!-- 主题颜色设置-->
-				<div>
-					<div class="setting_word">主题颜色设置</div>
-					<div class="out_of_table">
-						<div class="prompt_word">
-							<p>
-								说明：刷新页面之后，全局生效。
-							</p>
+					<hr>
+					<!-- 自定义背景设置区域-->
+					<div id="favbgset">
+						<div class="setting_word">自定义背景设置</div>
+						<div class="out_of_table">
+							<div class="prompt_word">
+								<p>
+									自定义背景设置说明： 选择本地图片： 把文件路径中的“
+									<font class="importantwords">\</font>”替换为“
+									<font class="importantwords">/</font>”，并且在路径前添加“
+									<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
+									<font class="importantwords">file:///E:/83926/1.png</font>”。
+								</p>
+							</div>
+							<input id="pb" type="text">
+							<input type="button" value="确定" onclick="favoritePicture()">
 						</div>
-						<table class="color_picture">
-							<tr>
-								<td>
-									<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
-								</td>
-								<td>
-									<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
-								</td>
-								<td>
-									<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
-								</td>
-								<td>
-									<button class="colorchoose" type="button" style="background-color:#A020F0;" onclick="changeThemeColor('#A020F0')"><font color="#FFFFFF">基佬紫</font></button>
-								</td>
-							</tr>
-						</table>
 					</div>
-				</div>
-				<hr>
-				<div>
-					<button type="button" onclick="hideDiv()">关闭</button>
+					<hr>
+					<!-- 前景颜色设置-->
+					<div id="fgset">
+						<div class="setting_word">前景颜色设置</div>
+						<div class="out_of_table">
+							<table class="color_picture">
+								<tr>
+									<td>
+										<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
+									</td>
+									<td>
+										<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<hr>
+					<!-- 主题颜色设置-->
+					<div id="themeset">
+						<div class="setting_word">主题颜色设置</div>
+						<div class="out_of_table">
+							<div class="prompt_word">
+								<p>
+									说明：刷新页面之后，全局生效。
+								</p>
+							</div>
+							<table class="color_picture">
+								<tr>
+									<td>
+										<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
+									</td>
+									<td>
+										<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
+									</td>
+									<td>
+										<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
+									</td>
+									<td>
+										<button class="colorchoose" type="button" style="background-color:#A020F0;" onclick="changeThemeColor('#A020F0')"><font color="#FFFFFF">基佬紫</font></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<hr>
+					<div id="close">
+						<button type="button" onclick="hideDiv()">关闭</button>
+					</div>
 				</div>
 			</div>
 			<!--==================================================================================-->
@@ -227,7 +235,7 @@
 					</table>
 				</div>
 				<div id="zhushi">
-					HTML页面版本：11 (2017年10月2日)
+					HTML页面版本：12 (2017年10月3日)
 					<br><a href="updata.html" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">更新日志</a>
 				</div>
 			</div>

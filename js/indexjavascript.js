@@ -54,16 +54,9 @@ function onMouseOutPicture()
 function showDiv()
 {
 	var a = document.getElementById("setting_panel");
-	if (a.style.display == "none")
-	{
-		a.style.display = "block";
-		document.getElementById('fade').style.display = 'block';
-	}
-	else
-	{
-		a.style.display = "none";
-		document.getElementById('fade').style.display = 'none'
-	}
+	var b = document.getElementById("fade");
+	a.style.display = "block";
+	b.style.display = "block";
 }
 
 //设置区域隐藏
