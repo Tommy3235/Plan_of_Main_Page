@@ -8,6 +8,7 @@
 		<title>导航页</title>
 		<link id="maincss" rel="stylesheet" type="text/css" href="css/mainstyle.css" />
 		<link id="maincss" rel="stylesheet" type="text/css" href="css/indexstyle.css" />
+		<link id="maincss" rel="stylesheet" type="text/css" href="css/settingstyle.css" />
 		<script type="text/javascript" src="js/indexjavascript.js"></script>
 		<script type="text/javascript" src="js/mainjavascript.js"></script>
 	</head>
@@ -40,96 +41,99 @@
 					</div>
 				</div>
 				<div id="set_lower_area">
-					<div id="bgset">
-						<div class="setting_word">背景设置</div>
-						<div class="out_of_table">
-							<!-- 预置背景图缩略图选择区域-->
-							<table class="color_picture">
-								<tr>
-									<td class="picture">
-										<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
-										 onmouseout="onMouseOutSetting('p1')">
-									</td>
-									<td class="picture">
-										<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
-										 onmouseout="onMouseOutSetting('p2')">
-									</td>
-								</tr>
-								<tr>
-									<td class="picture">
-										<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
-										 onmouseout="onMouseOutSetting('p3')">
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<hr>
-					<!-- 自定义背景设置区域-->
-					<div id="favbgset">
-						<div class="setting_word">自定义背景设置</div>
-						<div class="out_of_table">
-							<div class="prompt_word">
-								<p>
-									自定义背景设置说明： 选择本地图片： 把文件路径中的“
-									<font class="importantwords">\</font>”替换为“
-									<font class="importantwords">/</font>”，并且在路径前添加“
-									<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
-									<font class="importantwords">file:///E:/83926/1.png</font>”。
-								</p>
+					<div id="set_all">
+						<div id="bgset">
+							<div class="setting_title">背景设置</div>
+							<div class="setting_block">
+								<!-- 预置背景图缩略图选择区域-->
+								<table class="color_picture">
+									<tr>
+										<td class="picture_table">
+											<img id=p1 class="setting_picture" src="img/mini-img/1-mini.jpg" onclick="changeBackgroundPicture('img/1.jpg')" onmousemove="onMouseMoveSetting('p1')"
+											onmouseout="onMouseOutSetting('p1')">
+										</td>
+										<td class="picture_table">
+											<img id=p2 class="setting_picture" src="img/mini-img/2-mini.jpg" onclick="changeBackgroundPicture('img/2.jpg')" onmousemove="onMouseMoveSetting('p2')"
+											 onmouseout="onMouseOutSetting('p2')">
+										</td>
+									</tr>
+									<tr>
+										<td class="picture_table">
+											<img id=p3 class="setting_picture" src="img/mini-img/3-mini.jpg" onclick="changeBackgroundPicture('img/3.jpg')" onmousemove="onMouseMoveSetting('p3')"
+											 onmouseout="onMouseOutSetting('p3')">
+										</td>
+									</tr>
+								</table>
 							</div>
-							<input id="pb" type="text">
-							<input type="button" value="确定" onclick="favoritePicture()">
 						</div>
-					</div>
-					<hr>
-					<!-- 前景颜色设置-->
-					<div id="fgset">
-						<div class="setting_word">前景颜色设置</div>
-						<div class="out_of_table">
-							<table class="color_picture">
-								<tr>
-									<td>
-										<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
-									</td>
-									<td>
-										<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<hr>
-					<!-- 主题颜色设置-->
-					<div id="themeset">
-						<div class="setting_word">主题颜色设置</div>
-						<div class="out_of_table">
-							<div class="prompt_word">
-								<p>
-									说明：刷新页面之后，全局生效。
-								</p>
+						<hr>
+						<!-- 自定义背景设置区域-->
+						<div id="favbgset">
+							<div class="setting_title">自定义背景设置</div>
+							<div class="setting_block">
+								<div class="prompt_word">
+									<p>
+										自定义背景设置说明： 选择本地图片： 把文件路径中的“
+										<font class="importantwords">\</font>”替换为“
+										<font class="importantwords">/</font>”，并且在路径前添加“
+										<font class="importantwords">file:///</font>”,之后粘贴进文本框确定即可。例如“
+										<font class="importantwords">file:///E:/83926/1.png</font>”。
+									</p>
+								</div>
+								<div id="input_fav" style="width:95%">
+									<input id="pb" type="text">
+									<input type="button" value="确定" onclick="favoritePicture()">
+								</div>
 							</div>
-							<table class="color_picture">
-								<tr>
-									<td>
-										<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
-									</td>
-									<td>
-										<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
-									</td>
-									<td>
-										<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
-									</td>
-									<td>
-										<button class="colorchoose" type="button" style="background-color:#A020F0;" onclick="changeThemeColor('#A020F0')"><font color="#FFFFFF">基佬紫</font></button>
-									</td>
-								</tr>
-							</table>
 						</div>
-					</div>
-					<hr>
-					<div id="close">
-						<button type="button" onclick="hideDiv()">关闭</button>
+						<hr>
+						<!-- 前景颜色设置-->
+						<div id="fgset">
+							<div class="setting_title">前景颜色设置</div>
+							<div class="setting_block">
+								<table class="color_picture">
+									<tr>
+										<td>
+											<button class="colorchoose" type="button" style="background-color:#FFFFFF;" onclick="setForegroundColor('#FFFFFF')"><font color="#000000">白色</font></button>
+										</td>
+										<td>
+											<button class="colorchoose" type="button" style="background-color:#000000;" onclick="setForegroundColor('#000000')"><font color="#FFFFFF">黑色</font></button>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<hr>
+						<!-- 主题颜色设置-->
+						<div id="themeset">
+							<div class="setting_title">主题颜色设置</div>
+							<div class="setting_block">
+								<div class="prompt_word">
+									当前主题颜色：
+									<button id=theme_sign type="button" style="height: 20px; width: 20px; background-color: rgb(30, 144, 255); border-width: 0px; border-style: solid; margin-bottom: 0px;padding-left: 0px;padding-right: 0px;vertical-align:bottom;">
+									</button>
+									<p>
+										说明：刷新页面之后，全局生效。
+									</p>
+								</div>
+								<table class="color_picture">
+									<tr>
+										<td>
+											<button class="colorchoose" type="button" style="background-color:#FE4365;" onclick="changeThemeColor('#FE4365')"><font color="#FFFFFF">少女粉</font></button>
+										</td>
+										<td>
+											<button class="colorchoose" type="button" style="background-color:#1E90FF;" onclick="changeThemeColor('#1E90FF')"><font color="#FFFFFF">天空蓝</font></button>
+										</td>
+										<td>
+											<button class="colorchoose" type="button" style="background-color:#32CD32;" onclick="changeThemeColor('#32CD32')"><font color="#FFFFFF">原谅绿</font></button>
+										</td>
+										<td>
+											<button class="colorchoose" type="button" style="background-color:#A020F0;" onclick="changeThemeColor('#A020F0')"><font color="#FFFFFF">基佬紫</font></button>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -219,23 +223,23 @@
 					<table id="URL_table">
 						<tbody>
 							<tr>
-								<td class="kuandu"><a href="https://www.bilibili.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">哔哩哔哩弹幕网</a></td>
-								<td class="kuandu"><a href="https://www.baidu.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">百度</a></td>
-								<td class="kuandu"><a href="https://www.youku.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">优酷</a></td>
-								<td class="kuandu"><a href="https://www.taobao.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">淘宝</a></td>
-								<td class="kuandu"><a href="https://www.ithome.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">IT之家</a></td>
-								<td class="kuandu"><a href="https://share.dmhy.org/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">动漫花园资源网</a></td>
+								<td class="net_link"><a href="https://www.bilibili.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">哔哩哔哩弹幕网</a></td>
+								<td class="net_link"><a href="https://www.baidu.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">百度</a></td>
+								<td class="net_link"><a href="https://www.youku.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">优酷</a></td>
+								<td class="net_link"><a href="https://www.taobao.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">淘宝</a></td>
+								<td class="net_link"><a href="https://www.ithome.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">IT之家</a></td>
+								<td class="net_link"><a href="https://share.dmhy.org/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">动漫花园资源网</a></td>
 							</tr>
 							<tr>
-								<td class="kuandu"><a href="https://www.mi.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米商城</a></td>
-								<td class="kuandu"><a href="https://www.jd.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">京东商城</a></td>
-								<td class="kuandu"><a href="https://i.mi.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米云服务</a></td>
+								<td class="net_link"><a href="https://www.mi.com" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米商城</a></td>
+								<td class="net_link"><a href="https://www.jd.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">京东商城</a></td>
+								<td class="net_link"><a href="https://i.mi.com/" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">小米云服务</a></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 				<div id="zhushi">
-					HTML页面版本：12 (2017年10月3日)
+					HTML页面版本：13 (2017年10月4日)
 					<br><a href="updata.html" target="_blank" onmouseover="onMouseMoveNet(this)" onmouseout="onMouseOutNet(this)">更新日志</a>
 				</div>
 			</div>

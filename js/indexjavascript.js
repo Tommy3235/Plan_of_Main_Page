@@ -26,7 +26,7 @@ function openHtml()
 	{
 		changeThemeColor(c);
 	}
-	if (d == null || c == "")
+	if (d == null || d == "")
 	{
 		setCookies("foregroundcolor", "#000000", 365);
 		setForegroundColor("#000000");
@@ -96,6 +96,7 @@ function setThemeColor(co)
 {
 	var b = document.getElementsByClassName("setting_picture");
 	var c = document.getElementsByClassName("importantwords");
+	var d = document.getElementById("theme_sign");
 	for (var i = 0; i < b.length; i++)
 	{
 		b[i].style.borderColor = co;
@@ -104,6 +105,7 @@ function setThemeColor(co)
 	{
 		c[i].style.color = co;
 	}
+	d.style.backgroundColor = co;
 }
 
 //更改前景色
