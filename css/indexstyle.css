@@ -43,6 +43,28 @@
 	padding-top: 3px;
 	padding-left: 3px;
 	padding-right: 3px;
+	/* font-size: 16px;
+	width: 40%;
+	max-width: 500px;
+	height: 25px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	border-top-width: 0px;
+	border-top-style: solid;
+	border-bottom-width: 0px;
+	border-bottom-style: solid;
+	border-right-width: 0px;
+	border-right-style: solid;
+	border-left-width: 0px;
+	border-left-style: solid; */
+}
+
+#baidu_logo
+{
+	border:0px;
+	width:130px;
 }
 
 #baiduanniu

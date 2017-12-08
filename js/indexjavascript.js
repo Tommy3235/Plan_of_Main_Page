@@ -15,7 +15,7 @@ function openHtml()
 	}
 	else
 	{
-		document.body.style.backgroundImage = "url('" + a + "')";
+		document.body.style.backgroundImage = "url(" + a + ")";
 	}
 	if (c == null || c == "")
 	{
@@ -71,7 +71,7 @@ function hideDiv()
 //更改背景图片
 function changeBackgroundPicture(a)
 {
-	document.body.style.backgroundImage = "url('" + a + "')";
+	document.body.style.backgroundImage = "url(" + a + ")";
 	setCookies('bgname', a, 365);
 }
 
