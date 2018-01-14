@@ -5,7 +5,7 @@ function setCookies(name, value, time)
 {
 	var exdate = new Date();
 	exdate.setDate(exdate.getDate() + time);
-	document.cookie = name + "=" + escape(value) + ";" + ";path=/localserver/" + ";expires=" + exdate.toGMTString();
+	document.cookie = name + "=" + escape(value) + ";" + ";path=/" + ";expires=" + exdate.toGMTString();
 }
 
 //获取Cookies
